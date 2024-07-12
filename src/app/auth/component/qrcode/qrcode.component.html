@@ -1,0 +1,108 @@
+
+      
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light margin:0px shadow p-3 mb-5 bg-white rounded">
+    <div class="container">
+      <a class="navbar-brand bold" href="#"> Dashboard</a>
+    </div>
+    <div class="nav-item">
+        <a class="nav-link" routerLink="/login">Logout</a>
+       </div>
+  </nav>
+  
+  <div class=" justify-center">
+  
+    <h1 class="text-center" style="color:#4b7392" >QrCode Generator</h1>
+    
+  <div class="container-fluid d-flex justify-content-center  ">
+    <div class="card text-center shadow p-3 mb-5 bg-white rounded   " style="width: 30%;" >
+        <div class="card-body ">
+        <div class="card-image" id="container">
+          <div class="card-image" id="container">         
+  <qrcode (qrCodeURL)="onChangeURL($event)" style="text-align: center;" 
+      [qrdata]="'https://dovar.co/'+  newqr "
+  
+      [cssClass]="'center'"
+      [colorDark]="'#000000ff'"
+      [colorLight]="'#ffffffff'"
+      [elementType]="'canvas'" 
+      [imageHeight]="75"
+      [imageWidth]="75"
+      [margin]="4"
+      [scale]="1"
+      [title]="'A custom title attribute'"
+      [width]="300"
+      
+      [errorCorrectionLevel]="'M'"
+      [imageSrc]="'./assets/logo.png'"  
+      ></qrcode> 
+    </div>
+          
+            </div>
+  
+            <div class="card-body justify-items-center">
+  
+                
+                <div class="card-text text-center mb-2">
+  
+                    <h4 class="font-weight-bold ">
+                        Current Qrcode:
+                    </h4>
+                    <span>
+                      <!-- <app-qrcode [newqr]="qrcode"></app-qrcode> -->
+                   {{newqr}}
+                </span>
+                </div>
+                <!-- <button id="download" style="background-color:#4b7392;" class="btn  text-white btn-md center-block" 
+                 onclick="downloadSVG()"><a [href]="qrCodeDownloadLink" download="qrcode">Download</a></button> -->
+                <div>
+                  
+    
+       
+                  <!-- <button (click)="downloadQRCode()">Download QR Code</button> -->
+                  
+  
+                </div>
+  
+  
+                   <form >
+                
+                
+            <div class="form-group mb-3 ">
+  
+               
+                <label for="slug" class="form-label " >Add New</label>
+                <input type="text" id="slug"
+                    name="slug" class="form-control" />
+                    <br>
+                    <!-- <app-layout [newqr]="newqr"></app-layout> -->
+                    
+            </div>
+            <button type="submit" style="background-color:#70acd9;" class="btn mb-2  text-white  btn-md center-block"
+             data-mdb-ripple-init><a [href]="qrCodeDownloadLink" download="qrcode">Download</a></button>
+            </form>
+  
+  
+       
+            </div>
+     
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
